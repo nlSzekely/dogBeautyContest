@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+/* vote panel----------------- */
+.panel{
+    display: flex;
+    justify-content: center;
+}
+
+
+.card{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 28px -5px rgba(0,0,0,0.48);
+    -moz-box-shadow: 0px 0px 28px -5px rgba(0,0,0,0.48);
+    box-shadow: 0px 0px 28px -5px rgba(0,0,0,0.48);
+}
+
+
+
+.card img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+
+.voteBtn{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.voteBtn button{
+    padding: 10px 30px;
+    background-color: rgb(129, 175, 189);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+.voteBtn button:focus{
+    outline: none;
+}
+
+.voteBtn button:active{
+    transform: scale(0.97);
+}
+
+.voteBtn button:hover{
+    background-color: rgb(113, 154, 167);
+}
+
+.panel h3{
+    background-color: white;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 999;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 25%;
+    color: rgb(129, 175, 189);
+}
+
+/* leaderboard --------------------*/
+
+.leaderBoard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderCard{
+    display: flex;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 28px -5px rgba(0,0,0,0.48);
+    -moz-box-shadow: 0px 0px 28px -5px rgba(0,0,0,0.48);
+    box-shadow: 0px 0px 28px -5px rgba(0,0,0,0.48);
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    transition: all 0.1s ease-in;
+    margin: 5px;
+}
+.leaderCard:hover{
+    transform: scale(1.03)
+}
+
+.leaderCard >*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderCard :nth-child(1){
+    flex:1;
+}
+.leaderCard :nth-child(2){
+    flex:2;
+}
+.leaderCard :nth-child(3){
+    flex:2;
+}
+
+
+
+
+.leaderCard img{
+    max-width: 80px;
+    max-height: 80px;
+
+}
