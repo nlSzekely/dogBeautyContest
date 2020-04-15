@@ -19,10 +19,19 @@ class App extends React.Component{
             dogs:[],
             firstDog: null,
             secondDog: null,
+            title: ""
         }
     }
     componentDidMount=()=>{
         const database = firebase.database().ref('/dogs');
+        const titleBase = firebase.database().ref('/title');
+        titleBase.on('value',(item)=>{
+            const title = item.val();
+            this.setState({
+                title: title
+            })
+        })
+        
         this.setState({
             database:database
         },()=>{
@@ -104,7 +113,7 @@ class App extends React.Component{
     render(){
         return(
             <div className="container">
-               <h1 style={{textAlign:"center"}}>Dog Beauty Contest</h1> 
+               <h1 style={{textAlign:"center"}}>{this.state.title}</h1> 
                {this.renderPanel()}
                 <div className="leaderBoard">
                     <h1>Leaderboard</h1>  
